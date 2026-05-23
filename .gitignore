@@ -1,0 +1,14 @@
+## .NET
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.log
+*.dtbcache.v2
+
+## Visual Studio
+.vs/
+
+## Claude
+.claude/

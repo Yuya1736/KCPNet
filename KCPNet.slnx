@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="KCPExampleClient/KCPExampleClient.csproj" Id="3c321337-ff12-4ea4-a290-4b5c0c402895" />
+  <Project Path="KCPExampleProtocol/KCPExampleProtocol.csproj" Id="60da740c-81d5-4f28-a2e6-cc120510b9b5" />
+  <Project Path="KCPExampleServer/KCPExampleServer.csproj" Id="0ae92669-5ef8-4f36-bf22-42f0fdd48008" />
+  <Project Path="KCPNet/KCPNet.csproj" />
+</Solution>
