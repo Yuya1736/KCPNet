@@ -12,7 +12,7 @@ KCPNet/               — 核心库（netstandard2.0）
   KCPTool.cs          — 工具类：MessagePack 序列化、GZip 压缩、彩色控制台日志
 
 KCPExampleProtocol/   — 共享协议定义（netstandard2.0）
-  NetMessage.cs        — NetMessage、NetPing、CMD 枚举
+  NetMessage.cs           — NetMessage、NetPing、CMD 枚举
 
 KCPExampleClient/     — 示例客户端（net8.0）
   ClientStart.cs      — 入口，连接重试循环，5 秒心跳
@@ -235,6 +235,15 @@ mpc -i ./YourProtocolProject -o ./Unity/Assets/Scripts/Generated
 ```
 
 然后在 `MessagePackInitializer.cs` 中取消注释 IL2CPP 代码块，将 `StandardResolver` 替换为 `GeneratedResolver`。
+
+### MPC 代码生成器编辑器窗口
+
+`UnityPackage/Editor/MpcGeneratorWindow.cs` 提供了一个 Unity Editor 窗口，可在编辑器内直接运行 MessagePack 代码生成器，无需手动敲命令行：
+
+- 打开方式：**Tools → MPC Generator**
+- 设置输入路径（协议项目目录）和输出路径（生成代码存放目录），支持相对/绝对路径切换
+- 点击 **Run MPC Generation** 自动执行 `dotnet tool install`（如未安装）和 `mpc` 命令
+- 日志实时显示在窗口下方的日志区域
 
 ## 依赖
 
